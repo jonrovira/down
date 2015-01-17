@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module('down')
-	.controller('MainCtrl', ['$scope', '$http', '$location', '$rootScope',
+	.controller('TabsCtrl', ['$scope', '$http', '$location', '$rootScope',
 		function($scope, $http, $rootScope, $location) {
 
 	}]);

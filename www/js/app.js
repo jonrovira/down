@@ -22,10 +22,10 @@ angular.module('down', ['ionic', 'down'])
     $urlRouterProvider.otherwise('/')
 
     $stateProvider
-      .state('main', {
+      .state('tabs', {
         url: '/', 
-        templateUrl: 'templates/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'templates/tabs.html',
+        controller: 'TabsCtrl'
       })
       .state('login', {
         url: '/login',
