@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module('down')
-	.controller('SignupCtrl', ['$scope', '$http', '$location', '$rootScope',
+	.controller('RegisterCtrl', ['$scope', '$http', '$location', '$rootScope',
 		function($scope, $http, $rootScope, $location) {
-
+			console.log('Register working!');
 	}]);

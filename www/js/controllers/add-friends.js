@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module('down')
-	.controller('InviteCtrl', ['$scope', '$http', '$location', '$rootScope',
+	.controller('AddFriendsCtrl', ['$scope', '$http', '$location', '$rootScope',
 		function($scope, $http, $rootScope, $location) {
-
+			console.log('Add friends working!');
 	}]);

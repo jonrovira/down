@@ -4,5 +4,5 @@
 angular.module('down')
 	.controller('LoginCtrl', ['$scope', '$http', '$location', '$rootScope',
 		function($scope, $http, $rootScope, $location) {
-
+			console.log('Login working!');
 	}]);
