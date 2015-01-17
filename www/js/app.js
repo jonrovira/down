@@ -31,17 +31,22 @@ angular.module('down', ['ionic', 'down'])
         url: '/login',
         templateUrl: 'templates/login.html',
         controller: 'LoginCtrl'
-    })
+      })
       .state('register', {
         url: '/register',
         templateUrl: 'templates/register.html',
         controller: 'RegisterCtrl'
-    })
+      })
       .state('add-friends', {
         url: '/add-friends',
         templateUrl: 'templates/add-friends.html',
         controller: 'AddFriendsCtrl'
-    })
+      })
+      .state('groups', {
+        url: '/groups',
+        templateUrl: 'templates/groups.html',
+        controller: 'GroupsCtrl'
+      })
 
 
 })
