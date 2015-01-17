@@ -21,3 +21,23 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+
+
+
+main.login {
+	width: 100%;
+}
+main.register {
+	width: 100%;
+}
+
+section.login-wrapper {
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 70%;
+}
+section.register-wrapper {
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 70%;
+}
