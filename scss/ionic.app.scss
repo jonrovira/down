@@ -25,28 +25,23 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 
-header {
-	width: 100%;
-	border-bottom: 1px solid #333;
+ion-header-bar.header {
 
-	div.nav-outer {
-		padding: 5px 0;
+	h1.title {
 
-		nav {
-			margin: 0 auto;
-			width: 90%;
-			overflow: auto;
+		i {
+			vertical-align: middle;
+			font-size: 25px;
+		}
+	}
+	div.buttons {
 
-			div.nav-left {
-				float: left;
-			}
-			div.nav-right {
-				float: right;
-			}
-			> div {
-				i {
-					font-size: 25px;
-				}
+		button {
+			border: none;
+
+			i {
+				vertical-align: middle;
+				font-size: 25px;
 			}
 		}
 	}
@@ -81,9 +76,10 @@ section.add-friends-wrapper {
 
 section.add-friends-wrapper {
 
-	ul {
+	ion-list {
 
-		li {
+		ion-item {
+
 			span {
 				float: left;
 			}

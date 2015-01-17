@@ -6,41 +6,32 @@
 angular.module('down', ['ionic'])
 
 .run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
+    $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if(window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
+        if(window.StatusBar) {
+          StatusBar.styleDefault();
+        }
+    });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-  // Ionic uses the uiRouter instead of the default ngRoute
-  // this involves handling "states" rather than simple "routes"
-  $stateProvider
+    $urlRouterProvider.otherwise('/')
 
-    .state('login', {
-      url: '/login',
-      views: {
-        'login': {
-          templateUrl: 'templates/login.html',
-          controller: 'LoginCtrl'
-        }
-      }
-    })
-
-    .state('signup', {
-      url: '/signup',
-      views: {
-        'signup': {
-          templateUrl: 'templates/signup.html',
-          controller: 'SignupCtrl'
-        }
-      }
+    $stateProvider.state('login', {
+        url: '/',
+        templateUrl: 'templates/login.html'
+    }),
+    $stateProvider.state('register', {
+        url: '/register',
+        templateUrl: 'templates/register.html'        
+    }),
+    $stateProvider.state('add-friends', {
+        url: '/add-friends',
+        templateUrl: 'templates/add-friends.html'
     })
 
 
