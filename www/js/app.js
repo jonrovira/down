@@ -21,15 +21,16 @@ angular.module('down', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/')
 
-    $stateProvider.state('login', {
+    $stateProvider
+      .state('login', {
         url: '/',
         templateUrl: 'templates/login.html'
-    }),
-    $stateProvider.state('register', {
+    })
+      .state('register', {
         url: '/register',
         templateUrl: 'templates/register.html'        
-    }),
-    $stateProvider.state('add-friends', {
+    })
+      .state('add-friends', {
         url: '/add-friends',
         templateUrl: 'templates/add-friends.html'
     })
