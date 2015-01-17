@@ -2,19 +2,19 @@
     <section class="register-wrapper">
         <div class="list list-inset">
             <label class="item item-input">
-                <input type="text" placeholder="First name" />
+                <input type="text" ng-model="firstName" placeholder="First name" />
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="Last name" />
+                <input type="text" ng-model="lastName" placeholder="Last name" />
             </label>
             <label class="item item-input">
-                <input type="tel" placeholder="Phone number" />
+                <input type="tel" ng-model="number" placeholder="Phone number" />
             </label>
             <label class="item item-input">
-                <input type="password" placeholder="Password" />
+                <input type="password" ng-model="password" placeholder="Password" />
             </label>
             <label class="item item-input">
-                <input type="password" placeholder="One more time" />
+                <input type="password" ng-model="passwordConfirm" placeholder="One more time" />
             </label>
             <button class="button button-small" on-tap="submitRegister()">
                 Submit
