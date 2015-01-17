@@ -26,19 +26,14 @@ ion-header-bar.header {
 		}
 	}
 }
-
-
-main.register {
-	width: 100%;
-}
-main.add-friends {
-	width: 100%;
+ion-view {
+	padding-top: 45px;
 }
 
 
-/* Login */
+
+// Login
 section.login-wrapper {
-	padding-top: 100px;
 
 	div.list {
 
@@ -54,9 +49,8 @@ section.login-wrapper {
 }
 
 
-/* Register */
+// Register
 section.register-wrapper {
-	padding-top: 100px;
 
 	div.list {
 
@@ -70,6 +64,7 @@ section.register-wrapper {
 		}
 	}
 }
+
 
 
 section.add-friends-wrapper {

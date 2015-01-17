@@ -7009,33 +7009,24 @@ ion-header-bar.header div.buttons button {
     vertical-align: middle;
     font-size: 25px; }
 
-main.register {
-  width: 100%; }
+ion-view {
+  padding-top: 45px; }
 
-main.add-friends {
-  width: 100%; }
+section.login-wrapper div.list button {
+  margin-top: 20px;
+  padding: 7px 0;
+  width: 100%;
+  font-size: 15px;
+  color: #fff;
+  background-color: #4A87EE; }
 
-/* Login */
-section.login-wrapper {
-  padding-top: 100px; }
-  section.login-wrapper div.list button {
-    margin-top: 20px;
-    padding: 7px 0;
-    width: 100%;
-    font-size: 15px;
-    color: #fff;
-    background-color: #4A87EE; }
-
-/* Register */
-section.register-wrapper {
-  padding-top: 100px; }
-  section.register-wrapper div.list button {
-    margin-top: 20px;
-    padding: 7px 0;
-    width: 100%;
-    font-size: 15px;
-    color: #fff;
-    background-color: #4A87EE; }
+section.register-wrapper div.list button {
+  margin-top: 20px;
+  padding: 7px 0;
+  width: 100%;
+  font-size: 15px;
+  color: #fff;
+  background-color: #4A87EE; }
 
 section.add-friends-wrapper {
   margin: 0 auto; }
