@@ -1,4 +1,4 @@
-// www/js/controllers/groups.js
+// www/js/controllers/tabs.js
 'use strict';
 
 angular.module('down')

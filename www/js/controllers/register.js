@@ -1,4 +1,4 @@
-// www/js/controllers/signup.js
+// www/js/controllers/register.js
 'use strict';
 
 angular.module('down')
@@ -44,9 +44,13 @@ angular.module('down')
 				// 		window.localStorage.setItem('token', data.token);
 				// 		console.log('Successfully registered');
 				// 		$rootScope = newUser;
+						// console.log(newUser);
+						// $ionicLoading.hide();
+						// $location.url('/');
 				// 	});
 				console.log(newUser);
 				$ionicLoading.hide();
+				$location.url('/');
 			}
 			
 	}]);

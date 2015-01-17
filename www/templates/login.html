@@ -2,13 +2,13 @@
     <section class="login-wrapper">
     	<div class="list list-inset">
     		<label class="item item-input">
-    			<input type="tel" placeholder="Phone Number" />
+    			<input type="tel" ng-model="number" placeholder="Phone Number" />
     		</label>
     		<label class="item item-input">
-    			<input type="password" placeholder="Password" />
+    			<input type="password" ng-model="password" placeholder="Password" />
     		</label>
-    		<button class="button button-small">
-    			Submit
+    		<button class="button button-small" on-tap="submitLogin()">
+    			Login
     		</button>
     	</div>
     </section>
