@@ -43,6 +43,8 @@ section.login-wrapper {
 	div.list {
 
 		button {
+			margin-top: 20px;
+			padding: 7px 0;
 			width: 100%;
 			font-size: 15px;
 			color: #fff;
@@ -54,9 +56,19 @@ section.login-wrapper {
 
 /* Register */
 section.register-wrapper {
-	margin: 0 auto;
-	padding-top: 80px;
-	width: 70%;
+	padding-top: 100px;
+
+	div.list {
+
+		button {
+			margin-top: 20px;
+			padding: 7px 0;
+			width: 100%;
+			font-size: 15px;
+			color: #fff;
+			background-color: #4A87EE;
+		}
+	}
 }
 
 
