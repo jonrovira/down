@@ -17,3 +17,31 @@ angular.module('down', ['ionic'])
     }
   });
 })
+
+.config(function($stateProvider, $urlRouterProvider) {
+  // Ionic uses the uiRouter instead of the default ngRoute
+  // this involves handling "states" rather than simple "routes"
+  $stateProvider
+
+    .state('login', {
+      url: '/login',
+      views: {
+        'login': {
+          templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+        }
+      }
+    })
+
+    .state('signup', {
+      url: '/signup',
+      views: {
+        'signup': {
+          templateUrl: 'templates/signup.html',
+          controller: 'SignupCtrl'
+        }
+      }
+    })
+
+
+})
