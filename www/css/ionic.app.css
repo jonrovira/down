@@ -7015,10 +7015,29 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+header {
+  width: 100%;
+  border-bottom: 1px solid #333; }
+  header div.nav-outer {
+    padding: 5px 0; }
+    header div.nav-outer nav {
+      margin: 0 auto;
+      width: 90%;
+      overflow: auto; }
+      header div.nav-outer nav div.nav-left {
+        float: left; }
+      header div.nav-outer nav div.nav-right {
+        float: right; }
+      header div.nav-outer nav > div i {
+        font-size: 25px; }
+
 main.login {
   width: 100%; }
 
 main.register {
+  width: 100%; }
+
+main.add-friends {
   width: 100%; }
 
 section.login-wrapper {
@@ -7030,3 +7049,11 @@ section.register-wrapper {
   margin: 0 auto;
   padding-top: 20px;
   width: 70%; }
+
+section.add-friends-wrapper {
+  margin: 0 auto; }
+
+section.add-friends-wrapper ul li span {
+  float: left; }
+section.add-friends-wrapper ul li i {
+  float: right; }

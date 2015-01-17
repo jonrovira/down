@@ -24,12 +24,45 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 
+
+header {
+	width: 100%;
+	border-bottom: 1px solid #333;
+
+	div.nav-outer {
+		padding: 5px 0;
+
+		nav {
+			margin: 0 auto;
+			width: 90%;
+			overflow: auto;
+
+			div.nav-left {
+				float: left;
+			}
+			div.nav-right {
+				float: right;
+			}
+			> div {
+				i {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+}
+
+
 main.login {
 	width: 100%;
 }
 main.register {
 	width: 100%;
 }
+main.add-friends {
+	width: 100%;
+}
+
 
 section.login-wrapper {
 	margin: 0 auto;
@@ -41,3 +74,26 @@ section.register-wrapper {
 	padding-top: 20px;
 	width: 70%;
 }
+section.add-friends-wrapper {
+	margin: 0 auto;
+}
+
+
+section.add-friends-wrapper {
+
+	ul {
+
+		li {
+			span {
+				float: left;
+			}
+			i {
+				float: right;
+			}
+		}
+	}
+}
+
+
+
+
