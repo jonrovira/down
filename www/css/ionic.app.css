@@ -7010,7 +7010,8 @@ ion-header-bar.header div.buttons button {
     font-size: 25px; }
 
 ion-view {
-  padding-top: 45px; }
+  padding-top: 45px;
+  background-color: #231e1a !important; }
 
 section.login-wrapper div.list button {
   margin-top: 20px;
@@ -7028,10 +7029,29 @@ section.register-wrapper div.list button {
   color: #fff;
   background-color: #4A87EE; }
 
-section.add-friends-wrapper {
-  margin: 0 auto; }
-
 section.add-friends-wrapper ion-list ion-item span {
   float: left; }
 section.add-friends-wrapper ion-list ion-item i {
   float: right; }
+
+section.tabs-wrapper ion-tabs div.tab-nav.tabs {
+  top: 53px;
+  height: 25px;
+  background-color: transparent;
+  border: none; }
+  section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item {
+    max-width: 155px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 10px;
+    background-color: #524a4a;
+    border-radius: 5px 5px 0 0; }
+    section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item span.tab-title {
+      line-height: 20px;
+      color: #fff; }
+  section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item-active {
+    background-color: #e1dede; }
+    section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item-active span.tab-title {
+      color: #555; }
+  section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item + a.tab-item {
+    margin-left: 2px; }

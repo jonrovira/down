@@ -28,6 +28,7 @@ ion-header-bar.header {
 }
 ion-view {
 	padding-top: 45px;
+	background-color: rgb(35, 30, 26) !important;
 }
 
 
@@ -66,12 +67,7 @@ section.register-wrapper {
 }
 
 
-
-section.add-friends-wrapper {
-	margin: 0 auto;
-}
-
-
+// Add Friends
 section.add-friends-wrapper {
 
 	ion-list {
@@ -83,6 +79,45 @@ section.add-friends-wrapper {
 			}
 			i {
 				float: right;
+			}
+		}
+	}
+}
+
+
+// Tabs
+section.tabs-wrapper {
+
+	ion-tabs {
+
+		div.tab-nav.tabs {
+			top: 53px;
+			height: 25px;
+			background-color: transparent;
+			border: none;
+
+			a.tab-item {
+				max-width: 155px;
+				height: 25px;
+				line-height: 25px;
+				font-size: 10px;
+				background-color: rgb(82, 74, 74);
+				border-radius: 5px 5px 0 0;
+
+				span.tab-title {
+					line-height: 20px;
+					color: #fff;
+				}
+			}
+			a.tab-item-active {
+				background-color: rgb(225, 222, 222);
+
+				span.tab-title {
+					color: #555;
+				}
+			}
+			a.tab-item + a.tab-item {
+				margin-left: 2px;
 			}
 		}
 	}
