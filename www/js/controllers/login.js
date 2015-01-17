@@ -8,7 +8,7 @@ angular.module('down')
 
 		$scope.submitLogin = function() {
 
-			if (typeof $scope.password === 'undefined' || typeof $scope.number === 'undefined') {
+			if (typeof $scope.number === 'undefined' || typeof $scope.password === 'undefined') {
 				var alert = $ionicPopup.alert({
 					title: 'Please enter your number and password!',
 					template: 'You can\'t leave either field empty.'
@@ -19,12 +19,13 @@ angular.module('down')
 				return;
 			}
 
+			$ionicLoading.show({
+				template: 'Please wait...'
+			});
 			var credentials = {
 				number: $scope.number,
 				password: $scope.passwords
 			};
-
-			console.log(credentials);
 
 			// $http
 			// 	.post('/login', credentials)
@@ -39,5 +40,13 @@ angular.module('down')
 			// 			})
 			// 		}
 			// 	});
+
+			setTimeout(function() {
+				console.log(credentials);
+				$ionicLoading.hide();	
+			}, 1000)
+			// console.log(credentials);
+			// $ionicLoading.hide();
+
 		}
 	}]);

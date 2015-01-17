@@ -47,6 +47,11 @@ angular.module('down', ['ionic', 'down'])
         templateUrl: 'templates/groups.html',
         controller: 'GroupsCtrl'
       })
+      .state('down', {
+        url: '/down', 
+        templateUrl: 'templates/down.html',
+        controller: 'DownCtrl'
+      })
 
 
 })
