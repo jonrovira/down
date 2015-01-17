@@ -26,7 +26,20 @@ angular.module('down', ['ionic'])
     .state('login', {
       url: '/login',
       views: {
-        
+        'login': {
+          templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+        }
+      }
+    })
+
+    .state('signup', {
+      url: '/signup',
+      views: {
+        'signup': {
+          templateUrl: 'templates/signup.html',
+          controller: 'SignupCtrl'
+        }
       }
     })
 
