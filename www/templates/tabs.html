@@ -6,7 +6,7 @@
 				<div class="tabs-groups">
 					<div class="left">
 						<ul>
-							<li ng-repeat="group in groups" on-tap="toggleClass(0)" ng-class="activeTabs[0]">{{group.group_name}}</li>
+							<li ng-repeat="group in groups" on-tap="toggleClass({{$index}})" ng-class="activeTabs[{{$index}}]">{{group.group_name}}</li>
 							<!-- <li on-tap="toggleClass(1)" ng-class="activeTabs[1]">Soccer</li>
 							<li on-tap="toggleClass(2)" ng-class="activeTabs[2]">Sigma Chi</li>
 							<li on-tap="toggleClass(3)" ng-class="activeTabs[3]">Rage</li>
@@ -20,15 +20,15 @@
 					</div>
 					<div class="right">
 						<div class="group">
-							<h1 class="group-name">Rage</h1>
+							<h1 class="group-name">{{currentGroup.group_name}}</h1>
 							<h5 class="group-edit"><i class="ionicons ion-edit"></i></h5>
 							<ul class="group-people">
-								<li>
+								<li ng-repeat="friend in friends">
 									<i class="user-icon ionicons ion-ios7-person"></i>
-									<h5>Akshat Thirani</h5>
+									<h5>{{friend}}</h5>
 									<i class="down downness ionicons ion-ios7-circle-filled"></i>
 								</li>
-								<li>
+								<!-- <li>
 									<i class="user-icon ionicons ion-ios7-person"></i>
 									<h5>Phil House</h5>
 									<i class="down downness ionicons ion-ios7-circle-filled"></i>
@@ -42,7 +42,7 @@
 									<i class="user-icon ionicons ion-ios7-person"></i>
 									<h5>Joris Manzi</h5>
 									<i class="notdown downness ionicons ion-ios7-circle-filled"></i>
-								</li>
+								</li> -->
 							</ul>
 							<button class="imdown">Down</button>
 						</div>
