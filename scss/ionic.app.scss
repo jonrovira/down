@@ -317,6 +317,11 @@ div.tabs-groups {
 			}
 			button.imdown.activated {
 				bottom: 7px;
+				background: -webkit-linear-gradient(rgb(35, 229, 59), rgb(29, 191, 49));
+				background: -o-linear-gradient(rgb(35, 229, 59), rgb(29, 191, 49));
+				background: -moz-linear-gradient(rgb(35, 229, 59), rgb(29, 191, 49));
+				background: linear-gradient(rgb(35, 229, 59), rgb(29, 191, 49));
+				border: 1px solid #42ff23;
 			}
 		}
 	}

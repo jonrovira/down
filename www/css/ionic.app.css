@@ -7225,7 +7225,12 @@ div.tabs-groups {
         border: 1px solid #0C4F14;
         border-radius: 3px; }
       div.tabs-groups div.right div.group button.imdown.activated {
-        bottom: 7px; }
+        bottom: 7px;
+        background: -webkit-linear-gradient(#23e53b, #1dbf31);
+        background: -o-linear-gradient(#23e53b, #1dbf31);
+        background: -moz-linear-gradient(#23e53b, #1dbf31);
+        background: linear-gradient(#23e53b, #1dbf31);
+        border: 1px solid #42ff23; }
 
 div.tabs-friends {
   margin: 0 auto;
