@@ -7035,6 +7035,14 @@ header {
       font-size: 20px;
       color: #0A4010; }
 
+ion-side-menu.right-menu ion-item.item i {
+  margin-right: 10px;
+  font-size: 24px; }
+ion-side-menu.right-menu ion-item.item span {
+  position: relative;
+  top: -6px;
+  vertical-align: middle; }
+
 section.login-wrapper {
   margin: 5px auto 0 auto;
   padding: 20px 0;

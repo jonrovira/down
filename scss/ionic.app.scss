@@ -51,6 +51,24 @@ header {
 }
 
 
+// Side Menu
+ion-side-menu.right-menu {
+
+	ion-item.item {
+
+		i {
+			margin-right: 10px;
+			font-size: 24px;
+		}
+		span {
+			position: relative;
+			top: -6px;
+			vertical-align: middle;
+		}
+	}
+}
+
+
 // Login
 section.login-wrapper {
 	margin: 5px auto 0 auto;
