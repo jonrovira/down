@@ -19,9 +19,9 @@ angular.module('down')
 					})
 					return;
 				}
-				// $ionicLoading.show({
-				// 	template: 'Please wait...'
-				// });
+				$ionicLoading.show({
+					template: 'Please wait...'
+				});
 				var newUser = {
 					firstName: $scope.firstName,
 					lastName: $scope.lastName,
@@ -32,6 +32,7 @@ angular.module('down')
 				$http
 					.post('https://afternoon-fjord-7983.herokuapp.com/register', newUser)
 					.success(function(data, status, headers, config) {
+						$ionicLoading.hide();
 						if (data.status !== 'success') {
 							$ionicLoading.hide();
 							var errorPopup = $ionicPopup.alert({
@@ -47,7 +48,10 @@ angular.module('down')
 						window.localStorage.setItem('token', data.token);
 						console.log('Successfully registered');
 						$rootScope = newUser;
+						// redirect to main page
 						$location.path('/');
+						// not sure if return is required but ensure that this function stops running
+						return;
 					});
 			 }
 			
