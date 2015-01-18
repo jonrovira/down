@@ -43,4 +43,4 @@ angular.module('down', ['ionic', 'down'])
         controller: 'AddFriendsCtrl'
       })
 
-})
+});

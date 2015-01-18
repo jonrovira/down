@@ -16,6 +16,7 @@
         <script src="js/controllers/register.js"></script>
         <script src="js/controllers/add-friends.js"></script>
         <script src="js/controllers/tabs.js"></script>
+        <script src="js/controllers/content.js"></script>
 
     </head>
 
@@ -52,5 +53,14 @@
                 <li>Jon Rovira</li>
             </ul>
         </div>
+
+        <script>
+            // controller for right side menu
+            function ContentController($scope, $ionicSideMenuDelegate) {
+                $scope.toggleLeft = function() {
+                    $ionicSideMenuDelegate.toggleLeft();
+                };
+            }
+        </script>
     </body>
 </html>
