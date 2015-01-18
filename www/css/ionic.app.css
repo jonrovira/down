@@ -7003,12 +7003,20 @@ a.button {
   font-family: "Big-John";
   src: url('../fonts/Big-John/big-john.otf'); }
 
+@font-face {
+  font-family: "Slim-Joe";
+  src: url('../fonts/Slim-Joe/slim-joe.otf'); }
+
 ion-view {
   background-color: #373737 !important; }
 
 header {
   padding: 6px 13px;
   background-color: #0A4010;
+  background: -webkit-linear-gradient(#0e5917, #0c4f14);
+  background: -o-linear-gradient(#0e5917, #0c4f14);
+  background: -moz-linear-gradient(#0e5917, #0c4f14);
+  background: linear-gradient(#0e5917, #0c4f14);
   overflow: auto; }
   header h1.title {
     float: left;
@@ -7058,12 +7066,12 @@ section.register-wrapper {
   background-color: #e1dede;
   border-radius: 3px; }
   section.register-wrapper h1 {
-    margin: 30px 0 0;
+    margin: 40px 0 0;
     text-align: center;
     font-family: "Big-John";
     color: #999; }
   section.register-wrapper div.list {
-    margin: 20px 20px 64px;
+    margin: 30px 20px 44px;
     background-color: transparent; }
     section.register-wrapper div.list button {
       margin-top: 20px;
@@ -7081,38 +7089,44 @@ section.add-friends-wrapper ion-list ion-item i {
   float: right; }
 
 section.tabs-wrapper ion-tabs div.tab-nav.tabs {
-  top: 53px;
-  height: 25px;
+  top: 5px;
+  height: 30px;
   background-color: transparent;
+  background-image: none;
   border: none; }
   section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item {
-    max-width: 155px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 10px;
-    background-color: #524a4a;
-    border-radius: 5px 5px 0 0; }
+    max-width: 146px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 9px;
+    background-color: #565050;
+    border-radius: 5px 5px 0 0;
+    opacity: 1; }
     section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item span.tab-title {
       line-height: 20px;
+      font-family: "Slim-Joe";
       color: #fff; }
   section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item-active {
-    background-color: #e1dede; }
+    background-color: #e1e1e1; }
     section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item-active span.tab-title {
-      color: #555; }
+      color: #111; }
   section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item + a.tab-item {
     margin-left: 2px; }
 
 div.tabs-groups {
   margin: 0 auto;
-  margin-top: 78px;
-  width: calc(98% - 1px);
-  height: 368px;
-  background-color: #e1dede;
+  margin-top: 37px;
+  width: calc(100% - 26px);
+  height: 458px;
+  background-color: #e1e1e1;
   border-radius: 0 0 3px 3px; }
   div.tabs-groups div.left {
+    position: relative;
     float: left;
-    width: 50px; }
+    width: 70px;
+    height: 446px; }
     div.tabs-groups div.left ul {
+      margin-top: 6px;
       width: 100%; }
       div.tabs-groups div.left ul li {
         margin-left: 9px;
@@ -7120,59 +7134,98 @@ div.tabs-groups {
         width: 100%;
         line-height: 15px;
         font-size: 11px;
-        color: #444;
-        border-bottom: 1px solid #ccc; }
+        color: #000;
+        border-bottom: 1px solid #d5d5d5; }
       div.tabs-groups div.left ul li.active {
         position: relative;
-        width: 117%;
+        width: 112%;
         background-color: #efefef;
         border-bottom: none;
         border-radius: 3px 0 0 3px;
         box-shadow: 0 1px 0px #aaa, -1px 0 0px #bbb;
         z-index: 10;
         border-bottom: none; }
+    div.tabs-groups div.left button.add-group {
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
+      width: calc(100% + 20px);
+      text-align: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer; }
+      div.tabs-groups div.left button.add-group i {
+        font-size: 40px;
+        color: #888; }
   div.tabs-groups div.right {
+    position: relative;
     float: right;
+    margin-top: 6px;
+    margin-right: 6px;
     padding: 9px 8px;
-    width: calc(100% - 67px);
-    height: 350px;
+    width: calc(100% - 93px);
+    height: 446px;
     background-color: #efefef;
     border-radius: 5px;
     box-shadow: -1px 0 1px #bbb; }
     div.tabs-groups div.right div.group {
       width: 100%; }
       div.tabs-groups div.right div.group h1.group-name {
-        font-size: 13px;
-        color: #444; }
-      div.tabs-groups div.right div.group ul.group-people li {
-        margin-bottom: 5px;
-        padding: 4px;
-        background-color: #dfdbdf;
-        border-radius: 2px;
-        box-shadow: 0 1px 1px #bbb; }
-        div.tabs-groups div.right div.group ul.group-people li i.user-icon {
-          padding: 5px 10px 5px 5px;
-          border-right: 1px solid #ccc; }
-        div.tabs-groups div.right div.group ul.group-people li h5 {
-          margin: 0;
-          padding-left: 8px;
-          display: inline-block;
-          font-weight: normal;
-          font-size: 10px; }
-        div.tabs-groups div.right div.group ul.group-people li i.downness {
-          float: right;
-          padding: 5px 5px 5px 10px;
-          color: #42ff23;
-          border-left: 1px solid #ccc; }
-        div.tabs-groups div.right div.group ul.group-people li i.down {
-          color: #42ff23; }
-        div.tabs-groups div.right div.group ul.group-people li i.notdown {
-          color: #51A1E7; }
+        float: left;
+        margin: 0 0 12px 0;
+        font-size: 12px;
+        color: #666; }
+      div.tabs-groups div.right div.group h5.group-edit {
+        float: right;
+        margin: 0 0 12px 0; }
+        div.tabs-groups div.right div.group h5.group-edit i {
+          font-size: 11px;
+          color: #aaa; }
+      div.tabs-groups div.right div.group ul.group-people {
+        clear: both; }
+        div.tabs-groups div.right div.group ul.group-people li {
+          margin-bottom: 5px;
+          padding: 5px 3px;
+          background-color: #e1e1e1;
+          border-radius: 2px;
+          border-top: 1px solid #dedede;
+          box-shadow: 0 1px 1px #ccc; }
+          div.tabs-groups div.right div.group ul.group-people li i.user-icon {
+            padding: 5px 10px 5px 5px;
+            border-right: 1px solid #d5d5d5;
+            color: #555; }
+          div.tabs-groups div.right div.group ul.group-people li h5 {
+            margin: 0;
+            padding-left: 8px;
+            display: inline-block;
+            font-weight: normal;
+            font-size: 12px; }
+          div.tabs-groups div.right div.group ul.group-people li i.downness {
+            float: right;
+            padding: 5px 5px 5px 10px;
+            color: #42ff23;
+            border-left: 1px solid #d5d5d5; }
+          div.tabs-groups div.right div.group ul.group-people li i.down {
+            color: #1DBF31; }
+          div.tabs-groups div.right div.group ul.group-people li i.notdown {
+            color: #F98B23; }
       div.tabs-groups div.right div.group button.imdown {
-        border-radius: 4px;
+        position: absolute;
+        bottom: 9px;
+        padding: 16px 8px 12px 8px;
+        width: calc(100% - 18px);
         line-height: 10px;
+        font-family: "Big-John";
         color: #fff;
-        background-color: #42ff23; }
+        background-color: #137F21;
+        background: -webkit-linear-gradient(#0e5917, #0c4f14);
+        background: -o-linear-gradient(#0e5917, #0c4f14);
+        background: -moz-linear-gradient(#0e5917, #0c4f14);
+        background: linear-gradient(#0e5917, #0c4f14);
+        border: 1px solid #0C4F14;
+        border-radius: 3px; }
+      div.tabs-groups div.right div.group button.imdown.activated {
+        bottom: 7px; }
 
 div.bar-footer {
   bottom: 2px;
@@ -7181,6 +7234,7 @@ div.bar-footer {
   width: calc(100% - 26px);
   height: 30px;
   background-color: #1b1513;
+  background-image: none;
   border-radius: 3px; }
   div.bar-footer ul {
     padding: 5px 5px 10px 5px;
