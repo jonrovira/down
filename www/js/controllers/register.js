@@ -2,8 +2,8 @@
 'use strict';
 
 angular.module('down')
-	.controller('RegisterCtrl', ['$scope', '$http', '$location', '$rootScope', '$ionicPopup', '$ionicLoading',
-		function($scope, $http, $rootScope, $location, $ionicPopup, $ionicLoading) {
+	.controller('RegisterCtrl', ['$scope', '$http', '$rootScope', '$ionicPopup', '$ionicLoading', '$location',
+		function($scope, $http, $rootScope, $ionicPopup, $ionicLoading, $location) {
 			console.log('Registering user now!');
 			
 			$scope.submitRegister = function() {
@@ -27,30 +27,32 @@ angular.module('down')
 					lastName: $scope.lastName,
 					number: $scope.number,
 					password: $scope.password
-				}
-				// $http
-				// 	.post('/register', newUser)
-				// 	.success(function(data, status, headers, config) {
-				// 		if (!data.status) {
-				// 			$ionicLoading.hide();
-				// 			// var errorPopup = $ionicPopup.alert({
-				// 			// 	title: 'Error signing up!',
-				// 			// 	template: 'Please retry.'
-				// 			// });
-				// 			// alertPopup.then(function(res) {
-				// 			// 	console.log('Register error occurred!');
-				// 			// });
-				// 		}
-				// 		window.localStorage.setItem('token', data.token);
-				// 		console.log('Successfully registered');
-				// 		$rootScope = newUser;
-						// console.log(newUser);
-						// $ionicLoading.hide();
-						// $location.url('/');
-				// 	});
-				console.log(newUser);
-				$ionicLoading.hide();
-				$location.url('/');
-			}
+				};
+
+				$http
+					.post('https://afternoon-fjord-7983.herokuapp.com/register', newUser)
+					.success(function(data, status, headers, config) {
+						$ionicLoading.hide();
+						if (data.status !== 'success') {
+							$ionicLoading.hide();
+							var errorPopup = $ionicPopup.alert({
+								title: 'Error signing up!',
+								template: 'Please retry.'
+							});
+							alertPopup.then(function(res) {
+								console.log('Register error occurred!');
+							});
+							return;
+						}
+						$ionicLoading.hide();
+						window.localStorage.setItem('token', data.token);
+						console.log('Successfully registered');
+						$rootScope = newUser;
+						// redirect to main page
+						$location.path('/');
+						// not sure if return is required but ensure that this function stops running
+						return;
+					});
+			 }
 			
 	}]);

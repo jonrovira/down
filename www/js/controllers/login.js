@@ -2,8 +2,8 @@
 'use strict';
 
 angular.module('down')
-	.controller('LoginCtrl', ['$scope', '$http', '$location', '$rootScope', '$ionicPopup', '$ionicLoading',
-		function($scope, $http, $rootScope, $location, $ionicPopup, $ionicLoading) {
+	.controller('LoginCtrl', ['$scope', '$http', '$rootScope', '$ionicPopup', '$ionicLoading', '$location',
+		function($scope, $http, $rootScope, $ionicPopup, $ionicLoading, $location) {
 			console.log('Login working!');
 
 		$scope.submitLogin = function() {
@@ -24,29 +24,29 @@ angular.module('down')
 			});
 			var credentials = {
 				number: $scope.number,
-				password: $scope.passwords
+				password: $scope.password
 			};
 
-			// $http
-			// 	.post('/login', credentials)
-			// 	.success(function(data, status, headers, config) {
-			// 		if (!data.status) {
-			// 			var alert = $ionicPopup.alert({
-			// 				title: 'Wrong number or password!',
-			// 				template: 'Please ensure you entered your correct credentials.'
-			// 			});
-			// 			alert.then(function(res) {
-			// 				console.log('Wrong credentials entered!');
-			// 			})
-			// 		}
-			// 	});
-
-			setTimeout(function() {
-				console.log(credentials);
-				$ionicLoading.hide();	
-			}, 1000)
-			// console.log(credentials);
-			// $ionicLoading.hide();
-
+			$http
+				.post('https://afternoon-fjord-7983.herokuapp.com/login', credentials)
+				.success(function(data, status, headers, config) {
+					$ionicLoading.hide();
+					if (data.status !== 'success') {
+						var alert = $ionicPopup.alert({
+							title: data.token,
+							template: 'Please ensure you entered your correct credentials.'
+						});
+						alert.then(function(res) {
+							console.log('Wrong credentials entered!');
+						})
+						return;
+					}
+					// store token in local storage
+					window.localStorage.setItem('token', data.token);
+					console.log('Successfully logged in!');
+					// redirect user to main page
+					$location.path('/');
+					return;
+				});
 		}
 	}]);
