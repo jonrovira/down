@@ -5,6 +5,8 @@ angular.module('down')
 	.controller('TabsCtrl', ['$scope', '$http', '$location', '$rootScope',
 		function($scope, $http, $rootScope, $location) {
 
+			// start off as down mode not toggled 
+			$scope.toggle = false;
 			// on page load, we need to get the list of groups and render them onto the main page
 			var id = window.localStorage.getItem('token');
 			var createTabArray = function(size) {
