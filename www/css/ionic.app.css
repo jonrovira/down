@@ -6999,18 +6999,30 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-ion-header-bar.header h1.title i {
-  vertical-align: middle;
-  font-size: 25px; }
-ion-header-bar.header div.buttons button {
-  border: none; }
-  ion-header-bar.header div.buttons button i {
-    vertical-align: middle;
-    font-size: 25px; }
-
 ion-view {
   padding-top: 45px;
-  background-color: #231e1a !important; }
+  background-color: #373737 !important; }
+
+header {
+  padding: 6px 15px;
+  background-color: #0A4010;
+  overflow: auto; }
+  header h1.title {
+    float: left;
+    margin: 0;
+    line-height: 25px; }
+    header h1.title img {
+      width: 25px; }
+  header button {
+    float: right;
+    padding: 1px 4px;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px; }
+    header button i {
+      vertical-align: middle;
+      font-size: 20px;
+      color: #0A4010; }
 
 section.login-wrapper div.list button {
   margin-top: 20px;

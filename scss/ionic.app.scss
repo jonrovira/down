@@ -2,33 +2,40 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 
+ion-view {
+	padding-top: 45px;
+	background-color: rgb(55, 55, 55) !important;
+}
 
 
 // Header
-ion-header-bar.header {
+header {
+	padding: 6px 15px;
+	background-color: #0A4010;
+	overflow: auto;
 
 	h1.title {
+		float: left;
+		margin: 0;
+		line-height: 25px;
+
+		img {
+			width: 25px;
+		}
+	}
+	button {
+		float: right;
+		padding: 1px 4px;
+		background-color: #fff;
+		border: none;
+		border-radius: 3px;
 
 		i {
 			vertical-align: middle;
-			font-size: 25px;
-		}
+			font-size: 20px;
+			color: #0A4010;
+		}	
 	}
-	div.buttons {
-
-		button {
-			border: none;
-
-			i {
-				vertical-align: middle;
-				font-size: 25px;
-			}
-		}
-	}
-}
-ion-view {
-	padding-top: 45px;
-	background-color: rgb(35, 30, 26) !important;
 }
 
 
