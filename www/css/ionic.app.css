@@ -6999,12 +6999,15 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+@font-face {
+  font-family: "Big-John";
+  src: url('../fonts/Big-John/big-john.otf'); }
+
 ion-view {
-  padding-top: 45px;
   background-color: #373737 !important; }
 
 header {
-  padding: 6px 15px;
+  padding: 6px 13px;
   background-color: #0A4010;
   overflow: auto; }
   header h1.title {
@@ -7024,21 +7027,53 @@ header {
       font-size: 20px;
       color: #0A4010; }
 
-section.login-wrapper div.list button {
-  margin-top: 20px;
-  padding: 7px 0;
-  width: 100%;
-  font-size: 15px;
-  color: #fff;
-  background-color: #4A87EE; }
+section.login-wrapper {
+  margin: 5px auto 0 auto;
+  padding: 20px 0;
+  width: calc(100% - 26px);
+  background-color: #e1dede;
+  border-radius: 3px; }
+  section.login-wrapper h1 {
+    margin: 90px 0 0;
+    text-align: center;
+    font-family: "Big-John";
+    color: #999; }
+  section.login-wrapper div.list {
+    margin: 70px 20px 102px;
+    background-color: transparent; }
+    section.login-wrapper div.list button {
+      margin-top: 10px;
+      padding: 7px 0;
+      width: 100%;
+      font-size: 15px;
+      color: #fff;
+      background-color: #4A87EE;
+      border: none;
+      border-radius: 0; }
 
-section.register-wrapper div.list button {
-  margin-top: 20px;
-  padding: 7px 0;
-  width: 100%;
-  font-size: 15px;
-  color: #fff;
-  background-color: #4A87EE; }
+section.register-wrapper {
+  margin: 5px auto 0 auto;
+  padding: 20px 0;
+  width: calc(100% - 26px);
+  background-color: #e1dede;
+  border-radius: 3px; }
+  section.register-wrapper h1 {
+    margin: 30px 0 0;
+    text-align: center;
+    font-family: "Big-John";
+    color: #999; }
+  section.register-wrapper div.list {
+    margin: 20px 20px 64px;
+    background-color: transparent; }
+    section.register-wrapper div.list button {
+      margin-top: 20px;
+      padding: 7px 0;
+      width: 100%;
+      font-size: 15px;
+      color: #fff;
+      background-color: #4A87EE;
+      border: none;
+      border-radius: 0; }
 
 section.add-friends-wrapper ion-list ion-item span {
   float: left; }
@@ -7141,9 +7176,9 @@ div.tabs-groups {
 
 div.bar-footer {
   bottom: 2px;
-  margin: 0 auto;
+  margin: 5px auto 0 auto;
   padding: 0;
-  width: 97%;
+  width: calc(100% - 26px);
   height: 30px;
   background-color: #1b1513;
   border-radius: 3px; }
@@ -7152,6 +7187,11 @@ div.bar-footer {
     list-style: none; }
     div.bar-footer ul li {
       display: inline-block;
-      line-height: 8px;
-      font-size: 8px;
+      vertical-align: middle;
+      margin-right: 5px;
+      line-height: 5px;
+      font-family: "Big-John";
+      font-size: 6px;
       color: #fff; }
+    div.bar-footer ul li:last-child {
+      margin-right: 0; }

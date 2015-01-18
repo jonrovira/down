@@ -1,16 +1,19 @@
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
+@font-face {
+	font-family: "Big-John";
+	src: url('../fonts/Big-John/big-john.otf');
+}
 
 
 ion-view {
-	padding-top: 45px;
 	background-color: rgb(55, 55, 55) !important;
 }
 
 
 // Header
 header {
-	padding: 6px 15px;
+	padding: 6px 13px;
 	background-color: #0A4010;
 	overflow: auto;
 
@@ -41,16 +44,31 @@ header {
 
 // Login
 section.login-wrapper {
+	margin: 5px auto 0 auto;
+	padding: 20px 0;
+	width: calc(100% - 26px);
+	background-color: rgb(225, 222, 222);
+	border-radius: 3px;
 
+	h1 {
+		margin: 90px 0 0;
+		text-align: center;
+		font-family: "Big-John";
+		color: #999;
+	}
 	div.list {
+		margin: 70px 20px 102px;
+		background-color: transparent;
 
 		button {
-			margin-top: 20px;
+			margin-top: 10px;
 			padding: 7px 0;
 			width: 100%;
 			font-size: 15px;
 			color: #fff;
 			background-color: #4A87EE;
+			border: none;
+			border-radius: 0;
 		}
 	}
 }
@@ -58,8 +76,21 @@ section.login-wrapper {
 
 // Register
 section.register-wrapper {
+	margin: 5px auto 0 auto;
+	padding: 20px 0;
+	width: calc(100% - 26px);
+	background-color: rgb(225, 222, 222);
+	border-radius: 3px;
 
+	h1 {
+		margin: 30px 0 0;
+		text-align: center;
+		font-family: "Big-John";
+		color: #999;
+	}
 	div.list {
+		margin: 20px 20px 64px;
+		background-color: transparent;
 
 		button {
 			margin-top: 20px;
@@ -68,6 +99,8 @@ section.register-wrapper {
 			font-size: 15px;
 			color: #fff;
 			background-color: #4A87EE;
+			border: none;
+			border-radius: 0;
 		}
 	}
 }
@@ -232,9 +265,9 @@ div.tabs-groups {
 // Footer
 div.bar-footer {
 	bottom: 2px;
-	margin: 0 auto;
+	margin: 5px auto 0 auto;
 	padding: 0;
-	width: 97%;
+	width: calc(100% - 26px);
 	height: 30px;
 	background-color: rgb(27, 21, 19);
 	border-radius: 3px;
@@ -245,9 +278,15 @@ div.bar-footer {
 
 		li {
 			display: inline-block;
-			line-height: 8px;
-			font-size: 8px;
+			vertical-align: middle;
+			margin-right: 5px;
+			line-height: 5px;
+			font-family: "Big-John";
+			font-size: 6px;
 			color: #fff;
+		}
+		li:last-child {
+			margin-right: 0;
 		}
 	}
 }
