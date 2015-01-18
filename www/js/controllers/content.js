@@ -9,5 +9,10 @@ angular.module('down')
 					$ionicSideMenuDelegate.toggleLeft();
 				};
 			}
+
+			function logout() {
+				window.localStorage.removeItem('token');
+				$location.path('/login');
+			};
 		}]);
 
