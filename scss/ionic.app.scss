@@ -4,7 +4,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 
-/* header */
+// Header
 ion-header-bar.header {
 
 	h1.title {
@@ -30,7 +30,6 @@ ion-view {
 	padding-top: 45px;
 	background-color: rgb(35, 30, 26) !important;
 }
-
 
 
 // Login
@@ -119,6 +118,127 @@ section.tabs-wrapper {
 			a.tab-item + a.tab-item {
 				margin-left: 2px;
 			}
+		}
+	}
+}
+
+
+// Tabs - Groups
+div.tabs-groups {
+	margin: 0 auto;
+	margin-top: 78px;
+	width: calc(98% - 1px);
+	height: 368px;
+	background-color: rgb(225, 222, 222);
+	border-radius: 0 0 3px 3px;
+
+	div.left {
+		float: left;
+		width: 50px;
+
+		ul {
+			width: 100%;
+
+			li {
+				margin-left: 9px;
+				padding: 10px 7px;
+				width: 100%;
+				line-height: 15px;
+				font-size: 11px;
+				color: #444;
+				border-bottom: 1px solid #ccc;
+			}
+			li.active {
+				position: relative;
+				width: 117%;
+				background-color: rgb(239, 239, 239);
+				border-bottom: none;
+				border-radius: 3px 0 0 3px;
+				box-shadow:  0   1px 0px #aaa,
+							-1px 0   0px #bbb;
+				z-index: 10;
+				border-bottom: none;
+			}
+		}
+	}
+	div.right {
+		float: right;
+		padding: 9px 8px;
+		width: calc(100% - 67px);
+		height: 350px;
+		background-color: rgb(239, 239, 239);
+		border-radius: 5px;
+		box-shadow: -1px 0 1px #bbb;
+
+		div.group {
+			width: 100%;
+
+			h1.group-name {
+				font-size: 13px;
+				color: #444;
+			}
+			ul.group-people {
+
+				li {
+					margin-bottom: 5px;
+					padding: 4px;
+					background-color: rgb(223, 219, 223);
+					border-radius: 2px;
+					box-shadow: 0 1px 1px #bbb;
+
+					i.user-icon {
+						padding: 5px 10px 5px 5px;
+						border-right: 1px solid #ccc;
+					}
+					h5 {
+						margin: 0;
+						padding-left: 8px;
+						display: inline-block;
+						font-weight: normal;
+						font-size: 10px;
+					}
+					i.downness {
+						float: right;
+						padding: 5px 5px 5px 10px;
+						color: #42ff23;
+						border-left: 1px solid #ccc;
+					}
+					i.down {
+						color: #42ff23;
+					}
+					i.notdown {
+						color: #51A1E7;
+					}
+				}
+			}
+			button.imdown {
+				border-radius: 4px;
+				
+			}
+		}
+	}
+}
+
+
+// Footer
+div.bar-footer {
+	bottom: 2px;
+	margin: 0 auto;
+	padding: 0;
+	width: 97%;
+	height: 30px;
+	background-color: rgb(27, 21, 19);
+	border-radius: 3px;
+
+	ul {
+		padding: 5px 5px 10px 5px;
+		list-style: none;
+
+		li {
+			display: inline-block;
+			line-height: 8px;
+			font-size: 8px;
+			color: #fff;
 		}
 	}
 }

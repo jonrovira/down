@@ -6999,7 +6999,6 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-/* header */
 ion-header-bar.header h1.title i {
   vertical-align: middle;
   font-size: 25px; }
@@ -7055,3 +7054,89 @@ section.tabs-wrapper ion-tabs div.tab-nav.tabs {
       color: #555; }
   section.tabs-wrapper ion-tabs div.tab-nav.tabs a.tab-item + a.tab-item {
     margin-left: 2px; }
+
+div.tabs-groups {
+  margin: 0 auto;
+  margin-top: 78px;
+  width: calc(98% - 1px);
+  height: 368px;
+  background-color: #e1dede;
+  border-radius: 0 0 3px 3px; }
+  div.tabs-groups div.left {
+    float: left;
+    width: 50px; }
+    div.tabs-groups div.left ul {
+      width: 100%; }
+      div.tabs-groups div.left ul li {
+        margin-left: 9px;
+        padding: 10px 7px;
+        width: 100%;
+        line-height: 15px;
+        font-size: 11px;
+        color: #444;
+        border-bottom: 1px solid #ccc; }
+      div.tabs-groups div.left ul li.active {
+        position: relative;
+        width: 117%;
+        background-color: #efefef;
+        border-bottom: none;
+        border-radius: 3px 0 0 3px;
+        box-shadow: 0 1px 0px #aaa, -1px 0 0px #bbb;
+        z-index: 10;
+        border-bottom: none; }
+  div.tabs-groups div.right {
+    float: right;
+    padding: 9px 8px;
+    width: calc(100% - 67px);
+    height: 350px;
+    background-color: #efefef;
+    border-radius: 5px;
+    box-shadow: -1px 0 1px #bbb; }
+    div.tabs-groups div.right div.group {
+      width: 100%; }
+      div.tabs-groups div.right div.group h1.group-name {
+        font-size: 13px;
+        color: #444; }
+      div.tabs-groups div.right div.group ul.group-people li {
+        margin-bottom: 5px;
+        padding: 4px;
+        background-color: #dfdbdf;
+        border-radius: 2px;
+        box-shadow: 0 1px 1px #bbb; }
+        div.tabs-groups div.right div.group ul.group-people li i.user-icon {
+          padding: 5px 10px 5px 5px;
+          border-right: 1px solid #ccc; }
+        div.tabs-groups div.right div.group ul.group-people li h5 {
+          margin: 0;
+          padding-left: 8px;
+          display: inline-block;
+          font-weight: normal;
+          font-size: 10px; }
+        div.tabs-groups div.right div.group ul.group-people li i.downness {
+          float: right;
+          padding: 5px 5px 5px 10px;
+          color: #42ff23;
+          border-left: 1px solid #ccc; }
+        div.tabs-groups div.right div.group ul.group-people li i.down {
+          color: #42ff23; }
+        div.tabs-groups div.right div.group ul.group-people li i.notdown {
+          color: #51A1E7; }
+      div.tabs-groups div.right div.group button.imdown {
+        border-radius: 4px; }
+
+div.bar-footer {
+  bottom: 2px;
+  margin: 0 auto;
+  padding: 0;
+  width: 97%;
+  height: 30px;
+  background-color: #1b1513;
+  border-radius: 3px; }
+  div.bar-footer ul {
+    padding: 5px 5px 10px 5px;
+    list-style: none; }
+    div.bar-footer ul li {
+      display: inline-block;
+      line-height: 8px;
+      font-size: 8px;
+      color: #fff; }
