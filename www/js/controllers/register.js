@@ -2,8 +2,8 @@
 'use strict';
 
 angular.module('down')
-	.controller('RegisterCtrl', ['$scope', '$http', '$location', '$rootScope', '$ionicPopup', '$ionicLoading',
-		function($scope, $http, $rootScope, $location, $ionicPopup, $ionicLoading) {
+	.controller('RegisterCtrl', ['$scope', '$http', '$rootScope', '$ionicPopup', '$ionicLoading', '$location',
+		function($scope, $http, $rootScope, $ionicPopup, $ionicLoading, $location) {
 			console.log('Registering user now!');
 			
 			$scope.submitRegister = function() {
@@ -19,9 +19,9 @@ angular.module('down')
 					})
 					return;
 				}
-				$ionicLoading.show({
-					template: 'Please wait...'
-				});
+				// $ionicLoading.show({
+				// 	template: 'Please wait...'
+				// });
 				var newUser = {
 					firstName: $scope.firstName,
 					lastName: $scope.lastName,
@@ -29,42 +29,9 @@ angular.module('down')
 					password: $scope.password
 				};
 
-				// $http({
-				// 	method: 'POST',
-				// 	url: 'https://afternoon-fjord-7983.herokuapp.com/register',
-				// 	data: newUser,
-				// 	headers: {
-				// 		'Access-Control-Allow-Origin': '*',
-    //             		'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-    //             		'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With'
-				// 		}
-				// 	})
-				// 	.success(function(data, status, headers, config) {
-				// 		console.log(data);
-				// 		if (data.status !== 'success') {
-				// 			$ionicLoading.hide();
-				// 			var errorPopup = $ionicPopup.alert({
-				// 				title: 'Error signing up!',
-				// 				template: 'Please retry.'
-				// 			});
-				// 			alertPopup.then(function(res) {
-				// 				console.log('Register error occurred!');
-				// 			});
-				// 		}
-				// 		console.log(data.token);
-				// 		window.localStorage.setItem('token', data.token);
-				// 		console.log('Successfully registered');
-				// 		$rootScope = newUser;
-				// 		$ionicLoading.hide();
-				// 		$location.path('/');
-				// 	});
-
-					
-				console.log(newUser);
 				$http
 					.post('https://afternoon-fjord-7983.herokuapp.com/register', newUser)
 					.success(function(data, status, headers, config) {
-						console.log(data);
 						if (data.status !== 'success') {
 							$ionicLoading.hide();
 							var errorPopup = $ionicPopup.alert({
@@ -76,11 +43,10 @@ angular.module('down')
 							});
 							return;
 						}
-						console.log(data.token);
+						$ionicLoading.hide();
 						window.localStorage.setItem('token', data.token);
 						console.log('Successfully registered');
 						$rootScope = newUser;
-						$ionicLoading.hide();
 						$location.path('/');
 					});
 			 }
