@@ -2,9 +2,12 @@
     <ion-scroll>
         <section class="add-friends-wrapper">
             <ion-list>
-                <ion-item ng-repeat="user in users">
-                    <span class="name">{{user.name}}</span>
+                <ion-item ng-repeat="name in names track by $index" name="name">
+                    <span class="name">{{name}}</span>
                     <i class="ionicons ion-person-add"></i>
+                    <ion-option-button class="button-info" on-tap="names.splice($index, 1)">
+                      Delete
+                    </ion-option-button>
                 </ion-item>
                <!--  <ion-item
                     <span class="name">Jon Rovira</span>

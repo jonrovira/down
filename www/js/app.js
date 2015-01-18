@@ -42,16 +42,5 @@ angular.module('down', ['ionic', 'down'])
         templateUrl: 'templates/add-friends.html',
         controller: 'AddFriendsCtrl'
       })
-      .state('groups', {
-        url: '/groups',
-        templateUrl: 'templates/groups.html',
-        controller: 'GroupsCtrl'
-      })
-      .state('down', {
-        url: '/down', 
-        templateUrl: 'templates/down.html',
-        controller: 'DownCtrl'
-      })
-
 
 })
