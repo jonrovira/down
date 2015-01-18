@@ -279,9 +279,9 @@ div.tabs-groups {
 						color: #555;
 					}
 					h5 {
+						display: inline-block;
 						margin: 0;
 						padding-left: 8px;
-						display: inline-block;
 						font-weight: normal;
 						font-size: 12px;
 					}
@@ -317,6 +317,81 @@ div.tabs-groups {
 			}
 			button.imdown.activated {
 				bottom: 7px;
+			}
+		}
+	}
+}
+
+
+// Tabs - Friends
+div.tabs-friends {
+	margin: 0 auto;
+	margin-top: 37px;
+	width: calc(100% - 26px);
+	height: 458px;
+	background-color: rgb(225, 225, 225);
+	border-radius: 0 0 3px 3px;
+
+	div.friends-container {
+		margin: 0 auto;
+		margin-top: 10px;
+		width: calc(100% - 20px);
+		height: 442px;
+		padding: 9px 8px;
+		background-color: rgb(239, 239, 239);
+		border-radius: 5px;
+		overflow-y: scroll;
+
+		ul {
+			margin: 0 auto;
+			margin-top: 6px;
+			width: calc(100% - 18px);
+			background-color: transparent;
+
+			li {
+				margin-bottom: 5px;
+				padding: 5px 7px;
+				background-color: rgb(225, 225, 225);
+				border-radius: 2px;
+				border-top: 1px solid #dedede;
+				box-shadow: 0 1px 1px #ccc;
+				overflow: auto;
+
+				div.friend-circle {
+					float: left;
+					margin-right: 5px;
+					padding: 5px;
+					width: 36px;
+					height: 36px;
+					text-align: center;
+					color: #222;
+					border: 1px solid #222;
+					border-radius: 50%;
+				}
+				h5 {
+					position: relative;
+					top: 6px;
+					display: inline-block;
+					margin: 0;
+					padding-left: 8px;
+					font-weight: normal;
+					font-size: 12px;
+				}
+				i.downness {
+					position: relative;
+					top: 3px;
+					float: right;
+					padding: 5px 5px 5px 10px;
+					font-size: 20px;
+					color: #42ff23;
+					border-left: 1px solid #d5d5d5;
+				}
+				i.down {
+					color: #1DBF31;
+				}
+				i.notdown {
+					color: #F98B23;
+				}
 			}
 		}
 	}

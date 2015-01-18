@@ -7195,9 +7195,9 @@ div.tabs-groups {
             border-right: 1px solid #d5d5d5;
             color: #555; }
           div.tabs-groups div.right div.group ul.group-people li h5 {
+            display: inline-block;
             margin: 0;
             padding-left: 8px;
-            display: inline-block;
             font-weight: normal;
             font-size: 12px; }
           div.tabs-groups div.right div.group ul.group-people li i.downness {
@@ -7226,6 +7226,66 @@ div.tabs-groups {
         border-radius: 3px; }
       div.tabs-groups div.right div.group button.imdown.activated {
         bottom: 7px; }
+
+div.tabs-friends {
+  margin: 0 auto;
+  margin-top: 37px;
+  width: calc(100% - 26px);
+  height: 458px;
+  background-color: #e1e1e1;
+  border-radius: 0 0 3px 3px; }
+  div.tabs-friends div.friends-container {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    height: 442px;
+    padding: 9px 8px;
+    background-color: #efefef;
+    border-radius: 5px;
+    overflow-y: scroll; }
+    div.tabs-friends div.friends-container ul {
+      margin: 0 auto;
+      margin-top: 6px;
+      width: calc(100% - 18px);
+      background-color: transparent; }
+      div.tabs-friends div.friends-container ul li {
+        margin-bottom: 5px;
+        padding: 5px 7px;
+        background-color: #e1e1e1;
+        border-radius: 2px;
+        border-top: 1px solid #dedede;
+        box-shadow: 0 1px 1px #ccc;
+        overflow: auto; }
+        div.tabs-friends div.friends-container ul li div.friend-circle {
+          float: left;
+          margin-right: 5px;
+          padding: 5px;
+          width: 36px;
+          height: 36px;
+          text-align: center;
+          color: #222;
+          border: 1px solid #222;
+          border-radius: 50%; }
+        div.tabs-friends div.friends-container ul li h5 {
+          position: relative;
+          top: 6px;
+          display: inline-block;
+          margin: 0;
+          padding-left: 8px;
+          font-weight: normal;
+          font-size: 12px; }
+        div.tabs-friends div.friends-container ul li i.downness {
+          position: relative;
+          top: 3px;
+          float: right;
+          padding: 5px 5px 5px 10px;
+          font-size: 20px;
+          color: #42ff23;
+          border-left: 1px solid #d5d5d5; }
+        div.tabs-friends div.friends-container ul li i.down {
+          color: #1DBF31; }
+        div.tabs-friends div.friends-container ul li i.notdown {
+          color: #F98B23; }
 
 div.bar-footer {
   bottom: 2px;
