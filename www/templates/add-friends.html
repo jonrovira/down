@@ -2,11 +2,11 @@
     <ion-scroll>
         <section class="add-friends-wrapper">
             <ion-list>
-                <ion-item>
-                    <span class="name">Nevil George</span>
+                <ion-item ng-repeat="user in users">
+                    <span class="name">{{user.name}}</span>
                     <i class="ionicons ion-person-add"></i>
                 </ion-item>
-                <ion-item
+               <!--  <ion-item
                     <span class="name">Jon Rovira</span>
                     <i class="ionicons ion-person-add"></i>
                 </ion-item>
@@ -61,7 +61,7 @@
                 <ion-item>
                     <span class="name">Doug Brennan</span>
                     <i class="ionicons ion-person-add"></i>
-                </ion-item>
+                </ion-item> -->
             </ion-list>
         </section>
     </ion-scroll>

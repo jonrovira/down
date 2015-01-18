@@ -24,7 +24,7 @@ angular.module('down')
 			});
 			var credentials = {
 				number: $scope.number,
-				password: $scope.passwords
+				password: $scope.password
 			};
 
 			// $http
